@@ -15,7 +15,7 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {  
 	string s;
-	Parser* word = (new TokenParser(Parser::WhiteSpace()->Plus()))->Optional() ->Then( new  TokenParser( Parser::Word()->Plus())) ->Then((new TokenParser(Parser::WhiteSpace()->Plus()))->Optional());
+	Parser* word = (new TokenParser(Parser::WhiteSpace()->Start())) ->Then( new  TokenParser( Parser::Word()->Plus())) ->Then(new TokenParser(Parser::WhiteSpace()->Start()));
 	Parser* p = new ActionParser(word,[](List* l){
 		return l->at(1);
 		});

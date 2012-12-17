@@ -25,8 +25,9 @@ ParseResult* RepeatingParser::ParseOn(stringStream* s)
 		if(p->IsSuccess())
 		{
 			elements->add(p->getActualResult());
-
+			delete p;
 		}else{
+			delete p;
 			return p;
 		}
 	}
@@ -37,8 +38,9 @@ ParseResult* RepeatingParser::ParseOn(stringStream* s)
 		if(p->IsSuccess())
 		{
 			elements->add(p->getActualResult());
-
+			delete p;
 		}else{
+			delete p;
 			return new ParseSuccess(elements);
 		}
 	}

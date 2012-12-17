@@ -87,5 +87,6 @@ void List::Do(std::function<void(Obj*)>f)
 void List::dispose()
 {
 	this->Do([](Obj* o){delete o;});
+	elements->clear();
 	delete elements;
 }

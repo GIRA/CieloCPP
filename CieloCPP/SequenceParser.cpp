@@ -36,6 +36,7 @@ ParseResult* SequenceParser::ParseOn(stringStream* s)
 		s->setPosition(start);
 		return p;
 	}
+	delete p;
 	p = _second->ParseOn(s);
 	if(p->IsSuccess())
 	{
@@ -46,6 +47,6 @@ ParseResult* SequenceParser::ParseOn(stringStream* s)
 		s->setPosition(start);
 		return p;
 	}
-	
+	delete p;
 	return new ParseSuccess(elements);
 }

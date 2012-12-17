@@ -16,10 +16,14 @@ ActionParser::~ActionParser(void)
 ParseResult * ActionParser::ParseOn(stringStream* s)
 {
 	ParseResult* p = _innterParser->ParseOn(s);
-	List* temp = new List(p->getActualResult());
 
-	if(p ->IsSuccess()) return new ParseSuccess(_f(temp));
-	delete temp;
+	if(p ->IsSuccess())
+	{		
+		List* temp = new List(p->getActualResult());
+		delete p;
+		p= new ParseSuccess(_f(temp));
+		delete temp;
+	}
 	return p;
 
 }

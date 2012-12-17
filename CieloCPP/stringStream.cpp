@@ -28,15 +28,16 @@ int stringStream::getPosition()
 
 std::string* stringStream::ContentsFromTo(int start, int stop)
 {
-	
+	if(start>=stop) return new std::string("");
+
 	char* c = (char*) malloc( (stop-start));
 	int count=0;
-	for(int i=start; i<=stop;i++)
+	for(int i=start; i<stop;i++)
 	{
 		c[count]  = _innerString->at(i); 
 		count++;
 	}
-	std::string* s = new std::string(c,stop-start+1);
+	std::string* s = new std::string(c,stop-start);
 	return s;
 
 }
@@ -62,6 +63,6 @@ std::string* stringStream::upTo(char c)
 	while(!isAtEnd() && next()!=c)
 	{
 	}
-	return ContentsFromTo(start,_position-2);
+	return ContentsFromTo(start,_position-1);
 
 }

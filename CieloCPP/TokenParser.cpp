@@ -23,12 +23,13 @@ ParseResult* TokenParser::ParseOn(stringStream* s)
 	int start,stop;
 	start = s->getPosition();
 	ParseResult * result = _internalParser->ParseOn(s);
-	stop = s->getPosition()-1;
+	stop = s->getPosition();
 	if(result->IsSuccess())
 	{
-		_Token* t = this->createToken(s->ContentsFromTo(start,stop));
-		ParseSuccess* result= new ParseSuccess(t);
-		return result;
+		_Token* t = this->createToken(s->ContentsFromTo(start,stop-1));
+		delete result;
+		ParseSuccess* r= new ParseSuccess(t);
+		return r;
 		//return ParseSuccess(createToken(s->ContentsFromTo(start,stop)));
 	}else{
 		s->setPosition(start);
