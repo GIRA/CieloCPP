@@ -1,0 +1,42 @@
+﻿Compilación iniciada a las 13/12/2012 08:33:52 p.m..
+     1>Proyecto "C:\Users\Tera\Desktop\Google Drive\TFI\CieloCPP\CieloCPP\CieloCPP.vcxproj" en el nodo 2 (build destinos).
+     1>InitializeBuildStatus:
+         Se creará "Debug\CPP-PP.unsuccessfulbuild" porque se especificó "AlwaysCreate".
+       ClCompile:
+         Todas las salidas están actualizadas.
+         f:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\CPP-PP.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Obj.cpp
+         Obj.cpp
+       Lib:
+         f:\Program Files\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Tera\Desktop\Google Drive\TFI\CieloCPP\Debug\CPP-PP.lib" /NOLOGO Debug\ActionParser.obj
+         Debug\AndParser.obj
+         Debug\ChoiceParser.obj
+         Debug\CieloCPP.obj
+         Debug\EndParser.obj
+         Debug\List.obj
+         Debug\LiteralParser.obj
+         Debug\NotParser.obj
+         Debug\Null.obj
+         Debug\Obj.obj
+         Debug\ObjString.obj
+         Debug\OptionalParser.obj
+         Debug\ParseFailure.obj
+         Debug\Parser.obj
+         Debug\ParseResult.obj
+         Debug\ParseSuccess.obj
+         Debug\PredicateParser.obj
+         Debug\RepeatingParser.obj
+         Debug\SequenceParser.obj
+         Debug\stdafx.obj
+         Debug\stringStream.obj
+         Debug\Token.obj
+         Debug\TokenParser.obj
+         Debug\WrappingParser.obj
+         CieloCPP.vcxproj -> C:\Users\Tera\Desktop\Google Drive\TFI\CieloCPP\Debug\CPP-PP.lib
+       FinalizeBuildStatus:
+         Se eliminará el archivo "Debug\CPP-PP.unsuccessfulbuild".
+         Aplicando tarea Touch a "Debug\CPP-PP.lastbuildstate".
+     1>Compilación del proyecto terminada "C:\Users\Tera\Desktop\Google Drive\TFI\CieloCPP\CieloCPP\CieloCPP.vcxproj" (build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:00.57

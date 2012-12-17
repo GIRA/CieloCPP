@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{84E3C22E-BED4-4F37-9BEE-DD2CA2A365D4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CPP-PP</RootNamespace>
+    <ProjectName>CPP-PP</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfAtl>false</UseOfAtl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="f:\program files\microsoft visual studio 10.0\vc\include\cstring" />
+    <None Include="f:\program files\microsoft visual studio 10.0\vc\include\string" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActionParser.h" />
+    <ClInclude Include="AndParser.h" />
+    <ClInclude Include="ChoiceParser.h" />
+    <ClInclude Include="EndParser.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="LiteralParser.h" />
+    <ClInclude Include="NotParser.h" />
+    <ClInclude Include="Null.h" />
+    <ClInclude Include="Obj.h" />
+    <ClInclude Include="ObjString.h" />
+    <ClInclude Include="OptionalParser.h" />
+    <ClInclude Include="ParseFailure.h" />
+    <ClInclude Include="Parser.h" />
+    <ClInclude Include="ParseResult.h" />
+    <ClInclude Include="ParseSuccess.h" />
+    <ClInclude Include="PredicateParser.h" />
+    <ClInclude Include="RepeatingParser.h" />
+    <ClInclude Include="SequenceParser.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="stringStream.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Token.h" />
+    <ClInclude Include="TokenParser.h" />
+    <ClInclude Include="WrappingParser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ActionParser.cpp" />
+    <ClCompile Include="AndParser.cpp" />
+    <ClCompile Include="ChoiceParser.cpp" />
+    <ClCompile Include="CieloCPP.cpp" />
+    <ClCompile Include="EndParser.cpp" />
+    <ClCompile Include="List.cpp" />
+    <ClCompile Include="LiteralParser.cpp" />
+    <ClCompile Include="NotParser.cpp" />
+    <ClCompile Include="Null.cpp" />
+    <ClCompile Include="Obj.cpp" />
+    <ClCompile Include="ObjString.cpp" />
+    <ClCompile Include="OptionalParser.cpp" />
+    <ClCompile Include="ParseFailure.cpp" />
+    <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="ParseResult.cpp" />
+    <ClCompile Include="ParseSuccess.cpp" />
+    <ClCompile Include="PredicateParser.cpp" />
+    <ClCompile Include="RepeatingParser.cpp" />
+    <ClCompile Include="SequenceParser.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stringStream.cpp" />
+    <ClCompile Include="Token.cpp" />
+    <ClCompile Include="TokenParser.cpp" />
+    <ClCompile Include="WrappingParser.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

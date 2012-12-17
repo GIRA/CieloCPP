@@ -1,0 +1,15 @@
+﻿Compilación iniciada a las 13/12/2012 05:24:29 p.m..
+     1>Proyecto "C:\Users\Tera\Desktop\Google Drive\TFI\CieloCPP\CieloParser\CieloParser.vcxproj" en el nodo 2 (build destinos).
+     1>InitializeBuildStatus:
+         Se creará "Release\CieloParser.unsuccessfulbuild" porque se especificó "AlwaysCreate".
+       ClCompile:
+         f:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CieloToken.cpp CieloTokenParser.cpp
+         CieloToken.cpp
+     1>c:\users\tera\desktop\google drive\tfi\cielocpp\cieloparser\CieloToken.h(1): fatal error C1083: No se puede abrir el archivo incluir: 'Token.h': No such file or directory
+         CieloTokenParser.cpp
+     1>c:\users\tera\desktop\google drive\tfi\cielocpp\cieloparser\CieloTokenParser.h(1): fatal error C1083: No se puede abrir el archivo incluir: 'TokenParser.h': No such file or directory
+     1>Compilación del proyecto terminada "C:\Users\Tera\Desktop\Google Drive\TFI\CieloCPP\CieloParser\CieloParser.vcxproj" (build destinos) -- ERROR.
+
+ERROR al compilar.
+
+Tiempo transcurrido 00:00:00.29
